@@ -1,6 +1,0 @@
-import hashlib
-import os # to generat a salt use os.urandom
-salt=os.urandom(128)
-key=input("enter your user name :")
-convert=hashlib.pbkdf2_hmac('sha256',key.encode('utf-8'),salt,10)
-print("The username is : ",convert)
